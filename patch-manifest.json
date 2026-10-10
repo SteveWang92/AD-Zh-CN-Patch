@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "patchVersion": "0.3.2",
+  "patchVersion": "0.3.3",
   "displayName": "Antimatter Dimensions Simplified Chinese Patch",
-  "indexMarker": "AD-ZH-CN-PATCH:0.3.2",
+  "indexMarker": "AD-ZH-CN-PATCH:0.3.3",
   "game": {
     "appId": "1399720",
     "buildId": "16370635",
