@@ -23,8 +23,8 @@
 
 | 项 | 上游 0.3.2 | 本仓库 | 增量 |
 | --- | --- | --- | --- |
-| 精确词条 | 4,816 | 5,696 | +880 |
-| 模式规则 | 1,084 | 1,391 | +307 |
+| 精确词条 | 4,816 | 5,705 | +889 |
+| 模式规则 | 1,084 | 1,402 | +318 |
 | 碎片规则 | 17 | 31 | +14 |
 
 分轮修复内容：
@@ -36,6 +36,7 @@
 5. **第五轮（维度行 / 星系 / 触发行）**：时间/无限维度行名的序数（`1st Time Dimension` → `第 1 时间维度`，经 `ordinal` 捕获转换）、`Cost: … EP/IP` 购买按钮、`Time Shards` 词条与既有规则捕获转换、`遥远/远端反物质星系` 头部、自动永恒标签（渲染时追加冒号导致的失配）、大坍缩自动购买器的 `Will trigger at …` 状态行族。
 6. **第六轮（时间研究 / 永恒挑战 / 时间跨度）**：时间研究描述与解锁条件文本、永恒挑战 `Requirement:` 前缀与需求句、时间研究商店页脚的计数行，以及 `TimeSpan` 各单复数形态的节点形状（`N hours, N minutes and N seconds` 全组合）。
 7. **第七轮（零散运行时拼装文本）**：复制器升级自动购买器按钮名（`Replicanti Chance/Interval/Max Galaxies`，运行时模板拼接）、时间研究商店页脚的 `You have N total Time Theorems.` 与 `You are gaining N TT/sec|hour.`、膨胀时间研究的 `Requirement:` 需求句（`… and N rows of Achievements`、仅 `N Eternity Points`）与 EC11/EC12 的 `Use only the … path`、永恒升级页的 `The cost for the ×N multiplier jumps at …` 与 `Capped: …`、无限维度页的 `Auto: ON/OFF`。
+8. **第八轮（错译修正 / 术语统一 / 覆盖率补漏）**：修正意思译错或漏词的词条（`Time Dimensions gain a multiplier based on tickspeed.` 误作“第一时间维度”、`You gain ×N more Eternity/Infinity Points` 丢失倍率含义、符文重置提示语句不通、复制器星系上限升级漏“星系”、`All Dimension multipliers ^x` 漏“倍率”等）；统一同一概念的译名（时间定理→时间之理、无限力量→无限之力、无限点→无限点数、复兴点→复兴点数、储存的无限次数→储备无限次数）；用 source map 还原的游戏源码重新做覆盖率扫描，补齐遗漏的界面文本（普通挑战 8 中维度提升/星系按钮的锁定提示、TS42 描述、打破无限升级的 `After EC6/EC11`、`(After TS31: …)`、符文献祭 `(next at …)`、现实升级条件、V 成就、天体导航提示、自动机模板警告等）。
 
 **验证方法**：将补丁运行时的匹配核心原样移植到独立验证台；每轮修改都通过占位符/标签/汉字/冲突机械校验，并运行覆盖全部历史修复的回归用例（最终 79 用例）；对游戏 `app.asar` 的每次重建都做 764 个文件的字节级回比对。静态全量覆盖率扫描显示已覆盖 UI 候选从 12,710 条提升至 13,579 条。
 
